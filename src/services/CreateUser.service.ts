@@ -16,7 +16,6 @@ export default class CreateUser {
     if (userAlreadyExists) {
       throw new AppError('User already exists!')
     }
-
     const user = await prisma.user.create({
       data: {
         name,
